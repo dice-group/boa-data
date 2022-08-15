@@ -22,7 +22,7 @@ then extract boa_en_10.tar.gz in this path
 solr-3.4.0/example/solr/data/index
 ```
 
-if the path doesnt exist add an index from example folder when the folders generate then copy boa index.
+if the path doesnt exist add an index from the example folder (example/solr/data/index/boa_en) when the folders generate then copy boa index.
 
 ## Do query
 
@@ -127,3 +127,13 @@ you should add this config
 ```
 <field name="SUPPORT_NUMBER_OF_PAIRS_LEARNED_FROM" type="long" indexed="true" stored="true"/>
 ```
+
+if the above url generate path not found error then replace 
+```
+<core name="collections" instanceDir="."/>
+```
+with 
+```
+<core name="boa_en" instanceDir="."/>
+```
+in solr.xml file
